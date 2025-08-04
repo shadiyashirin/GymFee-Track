@@ -23,6 +23,8 @@ class UserCreateSerializer(serializers.ModelSerializer):
             password=validated_data['password']
         )
 
+        return user
+
 class UserProfileSerializer(serializers.ModelSerializer):
     user = UserSerializer(read_only=True) # Nested serializer for user details
 
